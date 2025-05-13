@@ -33,7 +33,7 @@ const Navbar = () => {
         { href: "/", label: "Página inicial" },
         { href: "/regras", label: "Regras do Jardim" },
         { href: "/comochegar", label: "Como Chegar" },
-        { href: "/Contato", label: "Contato" },
+        { href: "/contato", label: "Contato" },
     ];
 
     return (

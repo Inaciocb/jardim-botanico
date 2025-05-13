@@ -1,11 +1,9 @@
 import Image from "next/image";
 
-// Texto descritivo
 const textoDescricao = `
 São generalistas, consumindo pequenos roedores, aves, anuros e serpentes. Sendo considerado o maior lagarto do Rio Grande do Sul, pode atingir mais de 50 cm, com uma cauda de até duas vezes o comprimento corporal. Possui um comportamento agressivo quando acuado, mas costuma fugir se perturbado. Apresenta uma atividade sazonal bem demarcada, hibernando no período de abril até julho. São ovíparos e as fêmeas podem depositar até 30 ovos.
 `;
 
-// Conta quantas linhas tem o texto
 const textoTemMaisDe20Linhas = textoDescricao.trim().split("\n").length > 20;
 
 export default function AmanitaMuscariaPage() {
@@ -17,7 +15,6 @@ export default function AmanitaMuscariaPage() {
         } items-start md:items-center justify-center gap-12 py-20`}
       >
         <div className="flex flex-col items-center space-y-4 md:w-1/2">
-          {/Substitui a ultimar parte pelo nome do arquivo de imagem da espécie. Substitui o Alt também pela descriçao da espécie, isso é importante pra leitura da tela/}
           <Image
             src="/Feed/teiu.jpg"
             alt="Lagarto grande"
@@ -30,12 +27,10 @@ export default function AmanitaMuscariaPage() {
             Teiú
           </div>
           <div className="text-3xl font-semibold text-black drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] text-center">
-            {/Cola aqui o nome científico do bicho/vegetal/fungo entre parenteses, se nao tiver no arquivo procura no google/}
             (Salvator merianae)
           </div>
         </div>
 
-        {/* Linha divisória */}
         {textoTemMaisDe20Linhas ? (
           <div className="h-[1px] bg-green-900 w-full my-4" />
         ) : (
@@ -45,7 +40,6 @@ export default function AmanitaMuscariaPage() {
           </>
         )}
 
-        {/* Texto dinâmico */}
         <div className="md:w-1/2 text-lg text-black text-justify leading-relaxed space-y-4 whitespace-pre-line px-4 md:px-0 max-w-[700px] mx-auto">
           {textoDescricao
             .trim()

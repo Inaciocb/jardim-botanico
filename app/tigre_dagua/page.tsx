@@ -1,12 +1,10 @@
 import Image from "next/image";
 
-// Texto descritivo
 const textoDescricao = `
 Um total de 11 espécies de quelônios ocorrem no Estado do Rio Grande do Sul, sendo cinco marinhas e seis de água doce.Entre as espécies límnicas, Trachemys dorbigni é a mais abundante e a que ocorre no maior número de habitats. Esta espécie é a mais meridional do seu gênero nas Américas e é a espécie mais impactada devido estar sujeita a um grande esforço de coleta de ovos destinados à geração de filhotes para o mercado de animais de estimação.. Os machos são mais escuros devido à melanização, além disto apresentam um grande aumento no tamanho da cauda em relação ao tamanho da carapaça quando comparado a fêmeas de mesmo comprimento da carapaça. Fonte: dissertação de Alex Bager (2003).
 
 `;
 
-// Conta quantas linhas tem o texto
 const textoTemMaisDe20Linhas = textoDescricao.trim().split("\n").length > 20;
 
 export default function AmanitaMuscariaPage() {
@@ -18,7 +16,6 @@ export default function AmanitaMuscariaPage() {
         } items-start md:items-center justify-center gap-12 py-20`}
       >
         <div className="flex flex-col items-center space-y-4 md:w-1/2">
-          {/Substitui a ultimar parte pelo nome do arquivo de imagem da espécie. Substitui o Alt também pela descriçao da espécie, isso é importante pra leitura da tela/}
           <Image
             src="/Feed/tigre_dagua.jpg"
             alt="tartaruga de agua"
@@ -31,7 +28,6 @@ export default function AmanitaMuscariaPage() {
             Tigre-d’água
           </div>
           <div className="text-3xl font-semibold text-black drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] text-center">
-            {/Cola aqui o nome científico do bicho/vegetal/fungo entre parenteses, se nao tiver no arquivo procura no google/}
             (Trachemys dorbigni)
           </div>
         </div>
@@ -45,8 +41,6 @@ export default function AmanitaMuscariaPage() {
             <div className="block md:hidden h-[1px] bg-green-900 w-full my-4"></div>
           </>
         )}
-
-        {/* Texto dinâmico */}
         <div className="md:w-1/2 text-lg text-black text-justify leading-relaxed space-y-4 whitespace-pre-line px-4 md:px-0 max-w-[700px] mx-auto">
           {textoDescricao
             .trim()
