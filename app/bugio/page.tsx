@@ -3,6 +3,7 @@ import Image from "next/image";
 // Texto descritivo
 const textoDescricao = `
 Emitem vocalizações que podem alcançar longas distâncias como mecanismo de manutenção do espaçamento entre os grupos e organização do grupo. Possuem uma dieta rica em folhas e  flores. Utilizam cauda preênsil para locomoção na copa das árvores, raramente são vistos no solo. Esses animais são bem adaptados a ambientes antropizados, sendo o crescimento urbano uma ameaça à espécie em decorrência de atropelamentos, eletrocussões e ataque de cães. Além disso, os bugios são importantes como indicadores da presença do vírus da febre amarela, pois são sensíveis ao vírus, levando a morte de muitos indivíduos. O bugio não transmite a febre amarela! Fonte: https://www.ufrgs.br/faunadigitalrs/mamiferos/ordem-primates/familia-atelidae/bugio-ruivo-alouatta-guariba-clamitans/
+
 `;
 
 // Conta quantas linhas tem o texto
@@ -16,20 +17,21 @@ export default function AmanitaMuscariaPage() {
           textoTemMaisDe20Linhas ? "flex-col" : "flex-col md:flex-row"
         } items-start md:items-center justify-center gap-12 py-20`}
       >
-        {/* Parte esquerda: imagem + títulos */}
         <div className="flex flex-col items-center space-y-4 md:w-1/2">
+          {/Substitui a ultimar parte pelo nome do arquivo de imagem da espécie. Substitui o Alt também pela descriçao da espécie, isso é importante pra leitura da tela/}
           <Image
-            src="/Feed/bugio_ruivo.jpg"
-            alt="Amanita muscaria no Jardim Botânico da UFSM"
+            src="/Feed/Bugiu_Ruivo.jpg"
+            alt="bugio, macaco"
             width={1200}
             height={800}
             className="w-full max-w-[700px] h-auto rounded-[36px] drop-shadow-[0_8px_16px_rgba(0,0,0,0.3)]"
             priority
           />
           <div className="text-4xl md:text-5xl font-semibold text-black drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] text-center">
-            Bugio Ruivo
+            Bugio
           </div>
           <div className="text-3xl font-semibold text-black drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] text-center">
+            {/Cola aqui o nome científico do bicho/vegetal/fungo entre parenteses, se nao tiver no arquivo procura no google/}
             (Allouatta guariba)
           </div>
         </div>

@@ -2,8 +2,7 @@ import Image from "next/image";
 
 // Texto descritivo
 const textoDescricao = `
-Um total de 11 espécies de quelônios ocorrem no Estado do Rio Grande do Sul, sendo cinco marinhas e seis de água doce.Entre as espécies límnicas, Trachemys dorbigni é a mais abundante e a que ocorre no maior número de habitats. Esta espécie é a mais meridional do seu gênero nas Américas e é a espécie mais impactada devido estar sujeita a um grande esforço de coleta de ovos destinados à geração de filhotes para o mercado de animais de estimação.. Os machos são mais escuros devido à melanização, além disto apresentam um grande aumento no tamanho da cauda em relação ao tamanho da carapaça quando comparado a fêmeas de mesmo comprimento da carapaça. Fonte: dissertação de Alex Bager (2003).
-
+São generalistas, consumindo pequenos roedores, aves, anuros e serpentes. Sendo considerado o maior lagarto do Rio Grande do Sul, pode atingir mais de 50 cm, com uma cauda de até duas vezes o comprimento corporal. Possui um comportamento agressivo quando acuado, mas costuma fugir se perturbado. Apresenta uma atividade sazonal bem demarcada, hibernando no período de abril até julho. São ovíparos e as fêmeas podem depositar até 30 ovos.
 `;
 
 // Conta quantas linhas tem o texto
@@ -20,19 +19,19 @@ export default function AmanitaMuscariaPage() {
         <div className="flex flex-col items-center space-y-4 md:w-1/2">
           {/Substitui a ultimar parte pelo nome do arquivo de imagem da espécie. Substitui o Alt também pela descriçao da espécie, isso é importante pra leitura da tela/}
           <Image
-            src="/Feed/tigre_dagua.jpg"
-            alt="tartaruga de agua"
+            src="/Feed/teiu.jpg"
+            alt="Lagarto grande"
             width={1200}
             height={800}
             className="w-full max-w-[700px] h-auto rounded-[36px] drop-shadow-[0_8px_16px_rgba(0,0,0,0.3)]"
             priority
           />
           <div className="text-4xl md:text-5xl font-semibold text-black drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] text-center">
-            Tigre-d’água
+            Teiú
           </div>
           <div className="text-3xl font-semibold text-black drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] text-center">
             {/Cola aqui o nome científico do bicho/vegetal/fungo entre parenteses, se nao tiver no arquivo procura no google/}
-            (Trachemys dorbigni)
+            (Salvator merianae)
           </div>
         </div>
 
