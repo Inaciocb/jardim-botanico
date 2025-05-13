@@ -7,3 +7,4 @@
 - Padrão de instanciamento de especies -> backend ou template.
 - Leitura de tela
 - View html da pág. do Jardim no site da UFSM
+- Analisar necessidade de um banco de dados ou não
