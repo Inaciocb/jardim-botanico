@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import Link from "next/link"
 import Image from "next/image";
 import "./globals.css"; // If using global styles
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
   children,
@@ -10,19 +11,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#B1DABB] antialiased">
-        <header className="bg-[#1E4026] py-4 flex justify-center">
+      <Navbar/>
+      <header className="bg-[#1E4026] flex justify-center pt-20">
           <div className="flex items-center gap-x-10">
-            {/* UFSM logo - bigger */}
             <Image
               src="/Layout/ufsm-brasao.png"
               alt="UFSM Brasão"
               width={300}
               height={300}
-              className="w-50 md:w-80 h-auto p-4"
+              className="w-50 md:w-80 h-auto"
               priority
             />
 
-            {/* Jerivaldo image - responsive, spaced to the right */}
             <div className="absolute right-4 md:right-8">
             <Image
               src="/Layout/Jerivaldo.png"
@@ -35,7 +35,8 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        {children}
+        
+        <main className="pt-10">{children}</main>
       </body>
     </html>
   );
